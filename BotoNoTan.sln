@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desire", "Desire\Desire.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilleniumEye", "MilleniumEye\MilleniumEye.csproj", "{E418C748-9F54-41B2-84A3-C390F59B7D74}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilleniumPuzzle", "MilleniumPuzzle\MilleniumPuzzle.csproj", "{DBFC82BB-CD46-415C-8699-DDC573ABBD17}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{E418C748-9F54-41B2-84A3-C390F59B7D74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E418C748-9F54-41B2-84A3-C390F59B7D74}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E418C748-9F54-41B2-84A3-C390F59B7D74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBFC82BB-CD46-415C-8699-DDC573ABBD17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBFC82BB-CD46-415C-8699-DDC573ABBD17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBFC82BB-CD46-415C-8699-DDC573ABBD17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBFC82BB-CD46-415C-8699-DDC573ABBD17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

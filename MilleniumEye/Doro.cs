@@ -42,19 +42,20 @@ namespace MilleniumEye
                 ShowWindow(h, 9);
                 Rect rect = new Rect();
                 IntPtr error = GetWindowRect(process.MainWindowHandle, ref rect);
-                while (error == (IntPtr) 0)
+                while (error == (IntPtr)0)
                 {
                     error = GetWindowRect(process.MainWindowHandle, ref rect);
                 }
                 Thread.Sleep(200);
                 var width = rect.right - rect.left;
                 var height = rect.bottom - rect.top;
-                //System.IO.FileStream fs = System.IO.File.Create(@"D:\snapshot.jpg");
+                var date = DateTime.UtcNow.ToBinary();
+                System.IO.FileStream fs = System.IO.File.Create(@"D:\yugi-"+ date+".jpg");
                 var bitmap = new Bitmap(width, height, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
                 Graphics.FromImage(bitmap).CopyFromScreen(rect.left, rect.top, 0, 0, new Size(width, height),
                     CopyPixelOperation.SourceCopy);
-                //bitmap.Save(fs, System.Drawing.Imaging.ImageFormat.Jpeg);
-                //fs.Close();
+                bitmap.Save(fs, System.Drawing.Imaging.ImageFormat.Jpeg);
+                fs.Close();
                 bitmap.Dispose();
             }
             catch (Exception ex)

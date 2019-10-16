@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Threading;
 using System.Windows.Controls;
 
 namespace MilleniumEye
@@ -11,9 +12,21 @@ namespace MilleniumEye
     {
         public MainWindow()
         {
-            var doro = new Doro();
-            doro.CaptureProcessWindow(Process.GetProcessesByName("dlpc")[0]);
+            var ts = new ThreadStart(BackgroundScreenshot);
+            var backgroundThread = new Thread(ts);
+            backgroundThread.Start();
             InitializeComponent();
+        }
+
+        private static void BackgroundScreenshot()
+        {
+            var doro = new Doro();
+            var process = Process.GetProcessesByName("devenv")[0];
+            while (true)
+            {
+                doro.CaptureProcessWindow(process);
+                Thread.Sleep(50);
+            }
         }
     }
 }

@@ -23,6 +23,8 @@ loc = np.where(res >= threshold)
 for pt in zip(*loc[::-1]):
     cv2.rectangle(img, pt, (pt[0] + w, pt[1] + h), (0,0,255), 2)
 
+img = np.fliplr(img.reshape(-1,3)).reshape(img.shape)
+
 plt.plot(100), plt.imshow(img, cmap='gray')
 plt.title('Detected Point'), plt.xticks([]), plt.yticks([])
 plt.suptitle('tresh')

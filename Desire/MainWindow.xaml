@@ -1,0 +1,19 @@
+﻿<Window x:Class="MilleniumEye.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MilleniumEye"
+        mc:Ignorable="d"
+        Title="BotoNoTan" Height="200" Width="525">
+    <Grid>
+        <TextBox Name="textBox1" Width="50" Height="20"/>
+        <Label Width="200" HorizontalAlignment="Left"
+               Target="{Binding ElementName=textBox1}">
+            <AccessText TextWrapping="WrapWithOverflow">
+                _Another long piece of text that requires text wrapping
+                goes here.
+            </AccessText>
+        </Label>
+    </Grid>
+</Window>
